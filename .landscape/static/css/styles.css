@@ -1,0 +1,23 @@
+html, body {
+    background-color: #FCFAFA;
+    color: #66C4C1;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-family: 'Goblin One', cursive;
+}
+a {
+    text-decoration: none;
+}
+#nav_links {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* FCFAFA, A2B9C1, 66C4C1, 7BA5B6, 427AAA
+Punch	#df492c	Primary
+Shark	#222226	Info
+Sycamore	#789045	Success
+Ecstasy	#f5800d	Warning
+Pomegranate	#f44336	Danger
+*/

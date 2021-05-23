@@ -1,0 +1,78 @@
+{% extends "structure.html" %}
+
+{% block main %}
+<style>
+    body {
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    #home_container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 40px);
+    }
+    #content {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+    }
+    #head {
+        font-size: 2.5em;
+        font-family: 'Goblin One', cursive;
+    }
+    #sub_form {
+        display: grid;
+        justify-content: center;
+        gap: 0;
+    }
+    #sub_form > input {
+        width: 400px;
+        height: 2em;
+    }
+    #btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 2vh;
+    }
+    #btns > button {
+        height: 70px;
+        width: 300px;
+    }
+</style>
+<nav id="nav_links">
+    <a id="login_btn" href="/login"><button>Login</button></a>
+    <a id="d_btn" href="/dashboard"><button>Dashboard</button></a>
+    <a id="t_btn" href="/privacy"><button>Privacy</button></a>
+    <a id="p_btn" href="/terms"><button>Terms</button></a>
+    <a id="logout_btn" href="/about"><button>About</button></a>
+</nav>
+<div id="home_container">
+    <div id="content">
+    <h1 id="head">Create Account</h1>
+    <form id="sub_form" action="/" method="POST">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" placeholder="First Name" name="fname" required/><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" placeholder="Last Name" name="lname" required/><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="johndoe@email.com" name="email" required/><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="password" name="password" required/><br>
+        <span id="btns">
+            <button id="sub_btn" type="submit">Create Account</button>
+        </span>
+    </form>
+        <p style="text-align: center;">{{ message }}</p>
+    </div>
+</div>
+    <script>
+        /*const sub_form = document.getElementById('sub_form');
+        const submit_form = () => {
+            sub_form.submit();
+        }*/
+    </script>
+
+
+{% endblock main %}

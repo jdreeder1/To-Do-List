@@ -1,0 +1,186 @@
+{% extends "structure.html" %}
+
+{% block main %}
+<style>
+    body {
+        max-height: 100vh;
+        /*overflow: hidden;*/
+    }
+    #container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    #content {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #container button {
+        width: 300px;
+    }
+    #update_lists {
+        grid-column: 1;
+        margin-top: -5vh;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #nav_head {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    #head {
+        font-size: 6em;
+        margin-top: 0;
+        font-family: 'Goblin One', cursive;
+    }
+    .list_select {
+        width: 300px;
+    }
+    
+    /*
+     #btn_container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s linear;
+     }
+     #btn_container.hide_btns {
+        visibility: hidden;
+        opacity: 0;
+     } 
+     #list_options {
+         display: grid;
+         align-items: center;
+         justify-content: center;
+         margin-top: -10vh;
+     }
+     #update_lists, #create_list {
+        overflow: hidden;
+        transition: max-height 0.5s, margin-top 0.5s ease-in-out; 
+        max-height: 0;
+        transform-origin: top;
+     }
+     #create_list {
+         z-index: 2;
+     }
+     #update_lists.dropdown, #create_list.dropdown {
+        max-height: 1000px;
+     }
+     #update_lists.dropdown {
+        margin-top: -10vh; 
+     }
+     #create_list.dropdown {
+        margin-top: -15vh;
+     }*/
+     .close {
+         font-size: 4em;
+         float: left;
+         cursor: pointer;
+     }
+</style>
+<nav id="nav_head">    
+    <button id="create_btn" onclick="create_new_list();">Create New List</button>
+    <h1 id="head">Dashboard</h1>
+   <a id="logout_btn" href="/logout"><button>Logout</button></a>
+</nav>   
+   <div id="container">
+       <!--
+     <div id="btn_container">
+        </div>-->
+    <div id="content">
+    <p style="margin-top: -5vh; margin-bottom: 5vh;">{{ message }}</p>
+        <div class="update_lists" id="update_lists">     
+            <form id="retrieve" action="/get_lists" method="POST">
+                <h2>Recent Lists</h2>
+                <button class="retrieve_lists" type="submit">Retrieve Lists</button>
+            </form>
+            <div id="list_info">
+                <form class="list_choice" action="/pick_list" method="POST">
+                <select class="list_select" name="list_choice">
+                        <option selected></option>
+                    {%for li in lists%}
+                        <option value="{{li}}">{{li}}</option>
+                    {%endfor%}
+                </select>
+                </form> 
+            </div>
+            <div id="tasks"><br>
+                {% if tasks is defined %}
+                    <form action="/delete_list" method="POST">
+                        <button type="submit" class="delete_list">Delete List</button>
+                        <input type="hidden" name="list_name" value="{{tasks[0]}}"/>
+                    </form>
+                    <h2>{{tasks[0]}}</h2>
+                    <button class="add_item" onclick="add_input(document.querySelector('.existing_list'));">Add List Item</button> <button class="remove_item" onclick="remove_input(document.querySelector('.existing_list'));">Remove List Item</button>
+                    <form class="mod_list" action="/update_list" method="POST">
+                        <input type="hidden" name="list_name" value="{{tasks[0]}}"/>
+                    <div class="existing_list">
+                        {% set task = tasks[1].split('","') %}
+                        {% set sub_task = task|replace(": ", "")|replace("\\", "")|replace("'", "")|replace('task', '')|replace('{', '')|replace('"', '')|replace('}', '')|replace('[', '')|replace(']', '') %}
+                        {% set formatted = sub_task.split(", ") %}
+                        {% for t in formatted %}
+                        <input type="text" style="width: 300px;" name="task[]" value="{{t}}" required/><br>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                    <br>
+                        <button type="submit">Submit</button>
+                    </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        const btn_container = document.getElementById('btn_container');
+        const secondary_options = document.getElementById('secondary_options');
+        const list_info = document.getElementById('list_info');
+        const retrieve_lists = document.querySelector('.retrieve_lists');
+        const list_choice = document.querySelector('.list_choice');
+        const list_select = document.querySelector('.list_select');
+        const existing_list = document.querySelector('.existing_list');
+        const add_item = document.querySelector('.add_item');
+        const remove_item = document.querySelector('.remove_item');
+        const list_container = document.querySelector('.list_container');
+        const sub_list = document.querySelector('.sub_list');
+        const create_list = document.querySelector('#create_list');
+        const update_lists = document.getElementById("update_lists");
+
+        const create_new_list = () => {
+            //action="/get_lists"
+            window.open('/create_list');
+        }
+        /*
+        const close_btn = (elem) => {
+            elem.classList.remove('dropdown');
+            btn_container.classList.remove('hide_btns');
+        }
+        const toggle_menu = (elem) => {
+            elem.classList.toggle('dropdown');
+            btn_container.classList.add('hide_btns');
+        };*/
+        
+        list_select.addEventListener('change', (e)=> {
+            list_choice.submit();
+            e.preventDefault();   
+        });
+
+        const add_input = (elem) => {
+            const l_item = `<input type='text' style='width: 300px;' name='task[]' class='item${elem.getElementsByTagName('input').length+1}' required/><br>`;
+            elem.insertAdjacentHTML('beforeend', l_item);
+        };
+        const remove_input = (elem) => {
+            if(elem.children.length > 2){
+                elem.removeChild(elem.lastElementChild.previousElementSibling);
+            }
+        };
+        
+    </script>
+{% endblock main %}

@@ -1,0 +1,62 @@
+{% extends "structure.html" %}
+{% include "project1_nav.html" %}
+
+{% block main %}
+<style>
+    body {
+        color: #66C4C1;
+        max-height: 100vh;
+        max-width: 100vw;
+        overflow: hidden;
+    }
+    #about_container {
+        display: grid;
+        margin: 10vh auto;
+        grid-template-rows: 15vh auto auto;
+        justify-content: center;
+        align-items: center;
+    }
+    #me {
+        font-size: 4em;
+        text-align: center;
+        grid-row: 1;
+    } 
+    #sub_title {
+        text-align: center;
+        grid-row: 2;
+        margin-top: -2vh;
+    }
+    #middle {
+        grid-row: 3;
+        display: flex;
+    }
+    #info {
+        display: inline-block;
+        font-size: 2em;
+        width: 40vw;
+    }
+    #pic {
+        float: left;
+    }
+    #avatar {
+        height: 300px;
+        width: 300px;
+    }
+</style>
+    <section id="about_container">
+    <h1 id="me">About Me</h1>
+    <h2 id="sub_title">(The creator of this To-Do List app)</h2>
+        <div id="middle">
+            <div id="info">
+                <p>I'm from a small town in the Midwestern U.S. I enjoy programming, riding my bike, video games, watching movies and playing chess.
+                <p>I also enjoy learning to cook new food, watching/playing sports, and traveling.</p>
+            </div>
+            <figure id="pic">
+                <img id="avatar" src="../static/images/avatar2.png" alt="me"/>
+            </figure>
+        </div>
+    </section>
+    <h2> {{ message }} </h2>
+
+    <br><br>
+{% endblock main %}

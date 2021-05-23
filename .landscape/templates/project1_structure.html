@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Pirple.com Homework #4</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
+    </head>
+    <body>
+        <main id="container">
+            {% block main %}
+                <h1>This only shows on structure.html</h1>
+            {% endblock main %}
+        </main>
+    </body>
+</html>

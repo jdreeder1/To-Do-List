@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>To-Do List</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/button_styles.css') }}"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Goblin+One&family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main id="main_block">
+            {% block main %}
+                <h1>This only shows on structure.html</h1>
+            {% endblock main %}
+        </main>
+    </body>
+</html>

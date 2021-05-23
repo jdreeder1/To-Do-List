@@ -1,0 +1,59 @@
+{% extends "structure.html" %}
+{% include "project1_nav.html" %}
+{% block main %}
+<style>
+    body {
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+    #content {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        width: 100vw;
+        height: 100vh;
+        grid-template-rows: repeat(3, auto);
+    }
+    #head {
+        grid-row: 1;
+        font-size: 2.5em;
+        font-family: 'Goblin One', cursive;
+    }
+    #sub_form {
+        grid-row: 2;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    #sub_form form {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    input {
+        width: 400px;
+        height: 2em;
+    }
+    #sub {
+        height: 70px;
+        width: 300px;
+        margin-left: 50px;
+        text-align: center;
+    }
+</style>
+<div id="content">
+    <div id="sub_form">
+        <h1 id="head">Login Now</h1>
+        <form action="/signin" method="POST">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email" name="email" required/><br>
+            <label for="pw">Password</label>
+            <input type="password" id="pw" placeholder="Password" name="password" required/><br>
+            <button type="submit" id="sub">Submit</button>
+        </form>
+        <p style="text-align: center;">{{ message }}</p>
+    </div>
+</div>
+{% endblock main %}
