@@ -1,0 +1,187 @@
+{% extends "structure.html" %}
+
+{% block main %}
+<style>
+    body {
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    #menu_toggle {
+        display: none;
+    }
+    #home_container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 40px);
+    }
+    #content {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+    }
+    #head {
+        font-size: 2.5em;
+        font-family: 'Goblin One', cursive;
+    }
+    #sub_form {
+        display: grid;
+        justify-content: center;
+        gap: 0;
+    }
+    #sub_form > input {
+        width: 400px;
+        height: 2em;
+    }
+    #btns {
+        display: flex;
+        justify-content: center;
+    }
+    #btns > button {
+        height: 70px;
+        width: 300px;
+    }
+    #close {
+        display: none;
+    }
+    @media only screen and (min-width: 901px) {
+        #menu_toggle {
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        #head {
+            display: none;
+        }
+        #menu_toggle {
+            display: block;
+            text-align: center;
+            z-index: 1;
+            position: fixed;
+            width: 100vw;
+            /*position: fixed;
+            left: calc(50vw - 0.5em);*/
+            font-size: 2em;
+            cursor: pointer;
+        }
+        #arrow {
+            display: block;
+        }
+        #nav_links {
+            display: grid;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            grid-template-columns: 100vw;
+            grid-template-rows: repeat(6, auto);
+            justify-content: center;
+            align-items: center;
+        }
+        #nav_links a button.open {
+            visibility: visible;
+            max-height: 1000px;
+        }
+        #nav_links a button {
+            visibility: hidden;
+            border: #FCFAFA;
+            max-height: 0;
+            transition: visibility 250ms, max-height 500ms ease-in-out;
+            width: 100%;
+        }
+        #close {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            color: #FCFAFA;
+            justify-content: center;
+            font-size: 2em;
+            cursor: pointer;
+        }
+    }
+    /*
+    @media only screen and (max-width: 700px){
+        #head {
+            font-size: 2em;
+        }
+    }
+    
+    @media only screen and (max-width: 560px){
+        #head {
+            font-size: 1.5em;
+        }
+    }*/
+</style>
+
+<span id="menu_toggle">&#9660;</span>
+<nav id="nav_links">
+    <a id="login_btn" href="/login"><button>Login</button></a>
+    <a id="d_btn" href="/dashboard"><button>Dashboard</button></a>
+    <a id="t_btn" href="/privacy"><button>Privacy</button></a>
+    <a id="p_btn" href="/terms"><button>Terms</button></a>
+    <a id="logout_btn" href="/about"><button>About</button></a>
+</nav>
+
+<div id="home_container">
+    <div id="content">
+    <h1 id="head">Create Account</h1>
+    <form class="form-group" id="sub_form" action="/" method="POST">
+        <label for="fname">First Name</label>
+        <input class="form-control" type="text" id="fname" placeholder="First Name" name="fname" required/>
+        <label for="lname">Last Name</label>
+        <input class="form-control" type="text" id="lname" placeholder="Last Name" name="lname" required/>
+        <label for="email">Email</label>
+        <input class="form-control" type="email" id="email" placeholder="johndoe@email.com" name="email" required/>
+        <label for="password">Password</label>
+        <input class="form-control" type="password" id="password" placeholder="password" name="password" required/><br>
+        <span id="btns">
+            <button id="sub_btn" type="submit">Create Account</button>
+        </span>
+    </form>
+        <p style="text-align: center;">{{ message }}</p>
+    </div>
+</div>
+    <script>
+        const head = document.getElementById('head');
+        const menu_toggle = document.getElementById('menu_toggle');
+        const nav_link = document.getElementById('nav_links');
+        const nav_btns = nav_link.querySelectorAll('button');
+        const close_btn = document.createElement('button');
+        close_btn.innerHTML = `&times;`;
+        //close_btn.style.cssText = 'font-size: 2em; color: #FCFAFA';
+        //<button type="button" class="btn-close" aria-label="Close"></button>
+        /*const close_btn = document.getElementById('close');*/
+
+        menu_toggle.addEventListener('click', ()=> {
+            //nav_link.classList.toggle('toggle');
+            nav_link.appendChild(close_btn);
+            close_btn.style.cssText = 'width: 100vw; box-shadow: none; color: #66C4C1 !important; background: none; font-size: 2em; cursor: pointer; text-align: center;';    
+            nav_btns.forEach(btn=> { btn.classList.add('open'); });
+            menu_toggle.style.display = 'none';
+            close_btn.style.display = 'block';
+            //console.log('clicked!');
+        });
+        close_btn.addEventListener('click', ()=> {
+            nav_link.removeChild(close_btn);
+            nav_btns.forEach(btn=> { btn.classList.remove('open'); });
+            menu_toggle.style.display = 'block';
+            close_btn.style.display = 'none';
+        });
+        window.addEventListener('resize', ()=> {
+            if (window.matchMedia("(min-width: 901px)").matches) {
+                menu_toggle.style.display = 'none';
+                close_btn.style.display = 'none';
+                head.style.display = 'block';
+            }
+            else {
+                menu_toggle.style.display = 'block';
+                head.style.display = 'none'; 
+            }
+        });
+        
+    </script>
+
+
+{% endblock main %}

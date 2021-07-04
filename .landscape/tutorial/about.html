@@ -1,0 +1,50 @@
+{% extends "structure.html" %}
+
+{% block main %}
+<style>
+    #about_container {
+        display: grid;
+        margin: 10vh auto;
+        grid-template-rows: repeat(2, auto);
+        justify-content: center;
+        align-items: center;
+    }
+    #me {
+        font-size: 4em;
+        text-align: center;
+        grid-row: 1;
+    } 
+    #middle {
+        display: flex;
+    }
+    #info {
+        display: inline-block;
+        font-size: 2em;
+        width: 40vw;
+    }
+    #pic {
+        float: left;
+    }
+    #avatar {
+        height: 300px;
+        width: 300px;
+    }
+</style>
+    <section id="about_container">
+    <h1 id="me">All About Me</h1>
+        <div id="middle">
+            <div id="info">
+                <p>I'm from a small town in the Midwestern U.S. I enjoy programming, riding my bike, video games, watching movies and playing chess.
+                <p>I also enjoy learning to cook new food, watching/playing sports, and traveling.</p>
+            </div>
+            <figure id="pic">
+                <img id="avatar" src="{{ pic | safe }}" alt="me"/>
+            </figure>
+        </div>
+    </section>
+    <h2> {{ message }} </h2>
+
+    <br><br>
+    <a href="/logout">Logout!</a>
+
+{% endblock main %}

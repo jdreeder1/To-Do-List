@@ -1,0 +1,65 @@
+
+/*put in separate stylesheet and link to it in structure.html*/
+button:focus {
+    outline: none !important;
+  }
+#nav_links {
+    display: flex;
+    justify-content: space-evenly;
+}
+#menu_toggle {
+    display: none;
+}
+#close {
+    display: none;
+}
+@media only screen and (min-width: 901px) {
+    #menu_toggle {
+        display: none;
+    }
+    #close {
+        display: none;
+    }
+}
+@media only screen and (max-width: 900px) {
+    #menu_toggle {
+        display: block;
+        text-align: center;
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    #nav_links {
+        display: grid;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, auto);
+        justify-content: center;
+        align-items: center;
+    }
+    #nav_links a button.open {
+        visibility: visible;
+        max-height: 1000px;
+    }
+    #nav_links a button {
+        visibility: hidden;
+        border: #FCFAFA;
+        max-height: 0;
+        transition: visibility 250ms, max-height 500ms ease-in-out;
+        width: 100%;
+    }
+    #close {
+        width: 100vw; 
+        box-shadow: none; 
+        color: #66C4C1 !important; 
+        background: none; 
+        font-size: 2em; 
+        cursor: pointer; 
+        text-align: center;
+    }
+}

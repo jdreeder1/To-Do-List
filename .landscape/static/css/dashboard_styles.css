@@ -1,0 +1,19 @@
+@media only screen and (max-width: 900px){
+    #nav_head {
+        display: grid;
+        width: 100vw;
+        grid-template-rows: repeat(3, auto);
+        justify-content: center;
+        align-items: center;
+    }
+    #create_btn {
+        grid-row: 1;
+    }
+    #logout_btn {
+        grid-row: 2;
+    }
+    #head {
+        font-size: 1.5em;
+        grid-row: 3;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}"/>
+    <title>Admin Dashboard</title>
+    <style>
+        .container {
+            font-size: 2em;
+            margin-top: 33vh;
+        }
+        .row > * {
+            text-align: center;
+        }
+        #log_out {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body> 
+    <form action="/admin_logout">
+        <button class="button-primary" id="log_out" type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns"> {{ message }}</div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
+                <button onclick="open_window()" type="submit">Total user signups: 
+                    {% set user_count =  count_users|replace("(", "")|replace(")", "")|replace(",", "") %}    
+                    {{ user_count }} 
+                </button>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="twelve columns">
+            <!--<form action="/find_recent" method="POST"></form>-->
+                <button onclick="open_window()" type="submit">Total signups in the last 24 hours: 
+                    {% set recent = recent_users|replace("(", "")|replace(")", "")|replace(",", "") %} 
+                    {{ recent }}
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">Total lists created:
+            {% set list_count = count_lists|replace("(", "")|replace(")", "")|replace(",", "") %} 
+            {{ list_count }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">Lists created in the last 24 hours: 
+            {% set list_recent = recent_lists|replace("(", "")|replace(")", "")|replace(",", "") %} 
+            {{ list_recent }}
+            </div>
+        </div>
+    </div>    
+
+    <script>
+        const open_window = () => {
+            //action="/get_lists"
+            window.open('/admin/users');
+        }
+    </script>
+</body>
+</html>

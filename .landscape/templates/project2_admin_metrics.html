@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}"/>
+    <title>Admin Dashboard</title>
+    <style>
+        .container {
+            font-size: 2em;
+        }
+        .row > * {
+            text-align: center;
+        }
+        #log_out {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body> 
+    <form action="/admin_logout">
+        <button class="button-primary" id="log_out" type="submit">Logout</button>
+    </form>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns"> {{ message }}</div>
+        </div> 
+        <div class="row"><div class="twelve columns">
+            <table class="u-full-width">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Account Created Date</th>
+                    </tr>
+                </thead>
+                {%for user in all_users%}
+                <tr>
+                    <td>{{user[0]}}</td>
+                    <td>{{user[1]}}</td>
+                    <td>{{user[2]}}</td>
+                    <td>{{user[3]}}</td>
+                    <td>
+                        <form action="/delete_user" method="POST">
+                            <input type="hidden" name="email" value="{{user[0]}}">
+                            <button class="button-primary" type="submit">Delete User</button>
+                        </form>
+                    </td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+        </div>
+        <div class="row"><div class="twelve columns">
+            {% if num_pgs is defined %}
+                {% for i in range(1, num_pgs+1) %}                
+                <a href="/admin/users/info/?page={{i}}" class="page">{{i}}</a>
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+        <div class="row"><div class="twelve columns">
+            {%if refresh is defined %}
+                <a href="/admin/users">Refresh</a>
+            {% endif %}
+        </div>
+        </div>
+    </div>    
+    <script>
+        /*const form = document.getElementById('pg_form');
+        const links = form.querySelectorAll('.page');
+        
+        links.forEach((link)=> {
+            link.addEventListener('click', ()=> {
+                form.submit();
+            });
+        }); */       
+    </script>
+</body>
+</html>

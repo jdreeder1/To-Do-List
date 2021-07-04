@@ -1,0 +1,26 @@
+[2021-06-30 23:11:31.053] [remoteagent] [info] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+[2021-06-30 23:11:31.053] [remoteagent] [info] Extension host agent started.
+[2021-06-30 23:11:34.197] [remoteagent] [info] [::ffff:127.0.0.1][739a5f56][ManagementConnection] New connection established.
+[2021-06-30 23:11:34.201] [remoteagent] [info] [::ffff:127.0.0.1][3b57bc9b][ExtensionHostConnection] New connection established.
+[2021-06-30 23:11:34.338] [remoteagent] [info] Listing 0 persistent terminals, 0 total terminals
+[2021-06-30 23:11:34.373] [remoteagent] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/jdreeder1/.vscode'
+[2021-06-30 23:11:59.246] [remoteagent] [info] [::ffff:127.0.0.1][3b57bc9b][ExtensionHostConnection] The client has reconnected.
+[2021-06-30 23:12:24.271] [remoteagent] [info] [::ffff:127.0.0.1][3b57bc9b][ExtensionHostConnection] The client has reconnected.
+[2021-06-30 23:12:24.703] [remoteagent] [info] [::ffff:127.0.0.1][3b57bc9b][ExtensionHostConnection] <106> Launched Extension Host Process.
+[2021-07-01 05:38:38.490] [remoteagent] [info] [::ffff:127.0.0.1][3b57bc9b][ExtensionHostConnection] The client has reconnected.
+[2021-07-01 05:39:03.607] [remoteagent] [info] [::ffff:127.0.0.1][3b57bc9b][ExtensionHostConnection] The client has reconnected.
+[2021-07-03 17:22:37.691] [remoteagent] [info] Installing extension: github.vscode-pull-request-github
+[2021-07-03 17:22:40.819] [remoteagent] [info] Downloaded extension: github.vscode-pull-request-github undefined
+[2021-07-03 17:22:44.142] [remoteagent] [info] Extracted extension to /home/jdreeder1/.vscode-server/extensions/.github.vscode-pull-request-github-0.22.0: github.vscode-pull-request-github
+[2021-07-03 17:22:44.148] [remoteagent] [info] Renamed to /home/jdreeder1/.vscode-server/extensions/github.vscode-pull-request-github-0.22.0
+[2021-07-03 17:22:44.151] [remoteagent] [info] Installation completed. github.vscode-pull-request-github
+[2021-07-03 17:22:44.166] [remoteagent] [info] Extensions installed successfully: github.vscode-pull-request-github

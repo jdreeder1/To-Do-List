@@ -1,0 +1,171 @@
+[2021-04-18 22:50:51.313] [exthost] [info] extension host started
+[2021-04-18 22:50:51.421] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2021-04-18 22:50:51.422] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/debug-auto-launch/dist/extension
+[2021-04-18 22:50:51.436] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2021-04-18 22:50:51.437] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/emmet/dist/node/emmetNodeMain
+[2021-04-18 22:50:51.507] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-04-18 22:50:51.507] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/git/dist/main
+[2021-04-18 22:50:51.592] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2021-04-18 22:50:51.592] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/merge-conflict/dist/mergeConflictMain
+[2021-04-18 22:50:51.599] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2021-04-18 22:50:51.599] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/search-result/dist/extension.js
+[2021-04-18 22:50:51.929] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-04-18 22:50:51.929] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/github/dist/extension.js
+[2021-04-18 22:50:52.018] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.js-debug {"startup":false,"extensionId":{"value":"ms-vscode.js-debug","_lower":"ms-vscode.js-debug"},"activationEvent":"onCommand:extension.js-debug.clearAutoAttachVariables"}
+[2021-04-18 22:50:52.018] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/ms-vscode.js-debug/src/extension.js
+[2021-04-18 22:50:52.245] [exthost] [info] eager extensions activated
+[2021-04-18 23:02:35.996] [exthost] [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter {"startup":false,"extensionId":{"value":"ms-toolsai.jupyter","_lower":"ms-toolsai.jupyter"},"activationEvent":"onLanguage:python"}
+[2021-04-18 23:02:35.999] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/extensions/ms-toolsai.jupyter-2021.2.576440691/out/client/extension
+[2021-04-18 23:02:38.804] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python {"startup":false,"extensionId":{"value":"ms-toolsai.jupyter","_lower":"ms-toolsai.jupyter"},"activationEvent":"api"}
+[2021-04-18 23:02:38.804] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension
+[2021-04-18 23:02:43.548] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"extensionId":{"value":"vscode.configuration-editing","_lower":"vscode.configuration-editing"},"activationEvent":"onLanguage:jsonc"}
+[2021-04-18 23:02:43.548] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/configuration-editing/dist/configurationEditingMain
+[2021-04-18 23:02:43.634] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"extensionId":{"value":"vscode.json-language-features","_lower":"vscode.json-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2021-04-18 23:02:43.634] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/json-language-features/client/dist/node/jsonClientMain
+[2021-04-18 23:02:43.934] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2021-04-18 23:02:43.934] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/typescript-language-features/dist/extension
+[2021-04-18 23:04:00.368] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-18 23:04:00.369] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-18 23:07:25.040] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"extensionId":{"value":"vscode.html-language-features","_lower":"vscode.html-language-features"},"activationEvent":"onLanguage:html"}
+[2021-04-18 23:07:25.040] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain
+[2021-04-19 23:55:22.348] [exthost] [info] ExtensionService#_doActivateExtension vscode.css-language-features {"startup":false,"extensionId":{"value":"vscode.css-language-features","_lower":"vscode.css-language-features"},"activationEvent":"onLanguage:css"}
+[2021-04-19 23:55:22.349] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/css-language-features/client/dist/node/cssClientMain
+[2021-04-21 01:01:16.970] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:01:16.971] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:01:17.425] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:01:17.426] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:01:17.857] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:01:17.857] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:01:18.377] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:01:18.378] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:01:18.811] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:01:18.811] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:01:19.248] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:01:19.248] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:04:31.961] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:04:31.961] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:04:32.399] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:04:32.399] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:04:32.856] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:04:32.856] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:05:29.429] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:05:29.429] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:05:30.014] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:05:30.015] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-21 01:05:30.525] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-21 01:05:30.526] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-22 00:07:28.385] [exthost] [error] [vscode.html-language-features] provider FAILED
+[2021-04-22 00:07:28.441] [exthost] [error] Error: Illegal argument: character must be non-negative
+	at Object.t.illegalArgument (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:11:10)
+	at new y (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:558:424)
+	at new y (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:555:904)
+	at f (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:203081)
+	at g (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:203165)
+	at _ (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:205454)
+	at /home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:204442
+	at C (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:204622)
+	at Array.map (<anonymous>)
+	at asCompletionResult (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:211027)
+	at async H.provideCompletionItems (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:28)
+[2021-04-22 00:40:58.723] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"extensionId":{"value":"vscode.extension-editing","_lower":"vscode.extension-editing"},"activationEvent":"onLanguage:typescript"}
+[2021-04-22 00:40:58.724] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/extension-editing/dist/extensionEditingMain
+[2021-04-27 11:21:52.980] [exthost] [info] ExtensionService#_doActivateExtension vscode.markdown-language-features {"startup":false,"extensionId":{"value":"vscode.markdown-language-features","_lower":"vscode.markdown-language-features"},"activationEvent":"onLanguage:markdown"}
+[2021-04-27 11:21:53.019] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/markdown-language-features/dist/extension
+[2021-04-29 00:21:12.375] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-29 00:21:12.376] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-29 00:22:51.319] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-29 00:22:51.320] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-29 00:54:00.300] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-29 00:54:00.300] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-29 00:54:00.867] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-29 00:54:00.867] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-29 00:54:01.526] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-29 00:54:01.526] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-29 00:54:15.286] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-29 00:54:15.286] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-04-29 00:54:15.721] [exthost] [error] [ms-python.python] provider FAILED
+[2021-04-29 00:54:15.721] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[2021-05-12 00:45:42.661] [exthost] [error] [vscode.html-language-features] provider FAILED
+[2021-05-12 00:45:42.690] [exthost] [error] Canceled: Canceled
+	at _.makeCancelError (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:60768)
+	at _.handleFailedRequest (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:60622)
+	at /home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:22198
+	at async H.provideCompletionItems (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:28)
+[2021-05-17 15:48:00.226] [exthost] [error] [vscode.html-language-features] provider FAILED
+[2021-05-17 15:48:00.303] [exthost] [error] Error: DisposableStore is missing...
+	at H._convertCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:789:55)
+	at H.resolveCompletionItem (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:788:813)

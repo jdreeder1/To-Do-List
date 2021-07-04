@@ -1,0 +1,73 @@
+{% extends "structure.html" %}
+{% block main %}
+<style>
+    #container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-rows: repeat(2, auto)
+    }
+    #container button, #container input {
+        width: 300px;
+    }
+    #nav_head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #head {
+        order: 1;
+        font-size: 6em;
+        margin-top: 0;
+        font-family: 'Goblin One', cursive;
+    }
+    #back_btn {
+        order: 2;
+    }
+    #logout_btn {
+        order: 3;
+        margin-top: 2vh;
+    }
+    @media only screen and (max-width: 900px){
+        #head {
+            font-size: 3em;
+        }
+    } 
+</style>
+<nav id="nav_head">    
+    <button id="back_btn" onclick="close_win();">Close</button>
+    <h1 id="head">Dashboard</h1>
+   <a id="logout_btn" href="/logout"><button>Logout</button></a>
+</nav> 
+<div id="container">
+    <div id="create_list">
+        <p style="margin-top: 5vh; margin-bottom: 5vh; text-align: center;">{{ message }}</p>
+        <h2>Create New List</h2>
+        <button class="add_item" onclick="add_input(document.querySelector('.list_container'));">Add List Item</button> 
+        <button class="remove_item" onclick="remove_input(document.querySelector('.list_container'));">Remove List Item</button>
+        <form class="sub_list" action="/new_list" method="POST">
+            <input type="text" name="list_name" placeholder="List Name" required/><br>
+            <!--<input type="hidden" name="username" value="{{ username }}"/>-->
+            <div class="list_container">
+                <input type='text' name='task[]' class='item' required><br>
+            </div>
+            <br><button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<script>
+    const close_win = () => {
+        window.close();
+    }
+    const add_input = (elem) => {
+            const l_item = `<input type='text' name='task[]' class='item${elem.getElementsByTagName('input').length+1}' required/><br>`;
+            elem.insertAdjacentHTML('beforeend', l_item);
+        };
+        const remove_input = (elem) => {
+            if(elem.children.length > 2){
+                elem.removeChild(elem.lastElementChild.previousElementSibling);
+            }
+        };
+</script>
+{% endblock main %}

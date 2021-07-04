@@ -1,0 +1,5 @@
+User belongs to experiment group 'jupyterTestcf'
+User belongs to experiment group 'pythonDiscoveryModulecf'
+User belongs to experiment group 'jupyterEnhancedDataViewer'
+> /usr/bin/python3 ~/.vscode-server/extensions/ms-toolsai.jupyter-2021.2.576440691/pythonFiles/pyvsc-run-isolated.py pip list
+> /usr/bin/python3 ~/.vscode-server/extensions/ms-toolsai.jupyter-2021.2.576440691/pythonFiles/pyvsc-run-isolated.py pip list

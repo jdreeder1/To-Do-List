@@ -1,0 +1,109 @@
+User belongs to experiment group 'pythonaacf'
+User belongs to experiment group 'pythonJediLSP'
+User belongs to experiment group 'pythonDiscoveryModuleWithoutWatcher'
+User belongs to experiment group 'pythonTensorboardExperiment'
+User belongs to experiment group 'PythonPyTorchProfiler'
+User belongs to experiment group 'CollectLSRequestTiming - control'
+User belongs to experiment group 'CollectNodeLSRequestTiming - experiment'
+User belongs to experiment group 'DeprecatePythonPath - experiment'
+> python ~/.vscode-server/extensions/ms-python.python-2021.2.633441544/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python ~/.vscode-server/extensions/ms-python.python-2021.2.633441544/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python ~/.vscode-server/extensions/ms-python.python-2021.2.633441544/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python ~/.vscode-server/extensions/ms-python.python-2021.2.633441544/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+Error 2021-06-30 23:12:40: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-06-30 23:12:52: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-06-30 23:12:53: Failed to check if file needs to be fixed [EntryNotFound (FileSystemError): Unable to read file 'vscode-remote://wsl+ubuntu-20.04/home/jdreeder1/.config/Code/User/settings.json' (EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, open '/home/jdreeder1/.config/Code/User/settings.json')
+	at _handleError (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:769:473)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+	at async y.readText (/home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:9:298390)
+	at async p.doesFileNeedToBeFixed (/home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:59:481011)
+	at async /home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:59:480138
+	at async Promise.all (index 0)
+	at async p.getFilesToBeFixed (/home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:59:480084)
+	at async p.updateTestSettings (/home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:59:479711)] {
+  code: 'FileNotFound',
+  name: 'EntryNotFound (FileSystemError)'
+}
+Error 2021-06-30 23:12:53: Failed to check if file needs to be fixed [EntryNotFound (FileSystemError): Unable to read file 'vscode-remote://wsl+ubuntu-20.04/home/jdreeder1/.vscode/settings.json' (EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, open '/home/jdreeder1/.vscode/settings.json')
+	at _handleError (/home/jdreeder1/.vscode-server/bin/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/out/vs/server/remoteExtensionHostProcess.js:769:473)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+	at async y.readText (/home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:9:298390)
+	at async p.doesFileNeedToBeFixed (/home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:59:481011)
+	at async /home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:59:480138
+	at async Promise.all (index 1)
+	at async p.getFilesToBeFixed (/home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:59:480084)
+	at async p.updateTestSettings (/home/jdreeder1/.vscode-server/extensions/ms-python.python-2021.2.633441544/out/client/extension.js:59:479711)] {
+  code: 'FileNotFound',
+  name: 'EntryNotFound (FileSystemError)'
+}
+Error 2021-06-30 23:12:53: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-06-30 23:12:53: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Starting Jedi language server.
+Error 2021-06-30 23:18:56: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-06-30 23:18:56: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-06-30 23:20:18: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-06-30 23:20:18: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-06-30 23:29:09: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-06-30 23:29:09: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-07-03 15:02:43: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}
+Error 2021-07-03 15:02:44: Failed to resolve symbolic link:  [Error: ENOENT: no such file or directory, lstat 'python3.8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'python3.8'
+}

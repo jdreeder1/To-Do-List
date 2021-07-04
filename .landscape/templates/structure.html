@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/button_styles.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/nav_styles.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_styles.css') }}"/>
+        <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}"/>-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Goblin+One&family=Roboto&display=swap" rel="stylesheet">
+        <title>To-Do List</title>
+    </head>
+    <body>
+        <main id="main_block">
+            {% block main %}
+                <h1>This only shows on structure.html</h1>
+            {% endblock main %}
+        </main>
+    </body>
+</html>

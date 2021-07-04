@@ -1,0 +1,159 @@
+{% extends "structure.html" %}
+
+{% block main %}
+<style>
+    body {
+        max-height: 100vh;
+        /*overflow: hidden;*/
+    }
+    #container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    #content {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #container button {
+        width: 300px;
+    }
+    #update_lists {
+        grid-column: 1;
+        /*margin-top: -5vh;*/
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    /*
+    #nav_head {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }*/
+    
+    .list_select {
+        width: 300px;
+    }
+    #nav_head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #head {
+        order: 1;
+        font-size: 6em;
+        margin-top: 0;
+        font-family: 'Goblin One', cursive;
+    }
+    #create_btn {
+        order: 2;
+    }
+    #logout_btn {
+        order: 3;
+        margin-top: 2vh;
+    }
+    .close {
+        font-size: 4em;
+        float: left;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 900px){
+        #head {
+            font-size: 3em;
+        }
+    }     
+</style>
+<nav id="nav_head"> 
+        <h1 id="head">Dashboard</h1>   
+        <button id="create_btn" onclick="create_new_list();">Create New List</button>
+        <a id="logout_btn" href="/logout"><button>Logout</button></a>
+</nav>   
+   <div id="container">       <!--
+     <div id="btn_container">
+        </div>-->
+    <div class="form-group" id="content">
+    <p style="margin-top: 5vh; margin-bottom: 5vh;">{{ message }}</p>
+        <div class="update_lists" id="update_lists">     
+            <form id="retrieve" action="/get_lists" method="POST">
+                <h2>Recent Lists</h2>
+                <button class="retrieve_lists" type="submit">Retrieve Lists</button>
+            </form>
+            <div class="input-field" id="list_info">
+                <form class="list_choice" action="/pick_list" method="POST">
+                <select class="form-control list_select" name="list_choice">
+                        <option selected></option>
+                    {%for li in lists%}
+                        <option value="{{li}}">{{li}}</option>
+                    {%endfor%}
+                </select>
+                </form> 
+            </div>
+            <div id="tasks"><br>
+                {% if tasks is defined %}
+                    <form action="/delete_list" method="POST">
+                        <button type="submit" class="delete_list">Delete List</button>
+                        <input type="hidden" name="list_name" value="{{tasks[0]}}"/>
+                    </form>
+                    <h2>{{tasks[0]}}</h2>
+                    <button class="add_item" onclick="add_input(document.querySelector('.existing_list'));">Add List Item</button> <button class="remove_item" onclick="remove_input(document.querySelector('.existing_list'));">Remove List Item</button>
+                    <form class="mod_list" action="/update_list" method="POST">
+                        <input type="hidden" name="list_name" value="{{tasks[0]}}"/>
+                    <div class="existing_list">
+                        {% set task = tasks[1].split('","') %}
+                        {% set sub_task = task|replace(": ", "")|replace("\\", "")|replace("'", "")|replace('task', '')|replace('{', '')|replace('"', '')|replace('}', '')|replace('[', '')|replace(']', '') %}
+                        {% set formatted = sub_task.split(", ") %}
+                        {% for t in formatted %}
+                        <input type="text" style="width: 300px;" name="task[]" value="{{t}}" required/><br>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                    <br>
+                        <button type="submit">Submit</button>
+                    </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        const btn_container = document.getElementById('btn_container');
+        const secondary_options = document.getElementById('secondary_options');
+        const list_info = document.getElementById('list_info');
+        const retrieve_lists = document.querySelector('.retrieve_lists');
+        const list_choice = document.querySelector('.list_choice');
+        const list_select = document.querySelector('.list_select');
+        const existing_list = document.querySelector('.existing_list');
+        const add_item = document.querySelector('.add_item');
+        const remove_item = document.querySelector('.remove_item');
+        const list_container = document.querySelector('.list_container');
+        const sub_list = document.querySelector('.sub_list');
+        const create_list = document.querySelector('#create_list');
+        const update_lists = document.getElementById("update_lists");
+
+        const create_new_list = () => {
+            //action="/get_lists"
+            window.open('/create_list');
+        }
+        
+        list_select.addEventListener('change', (e)=> {
+            list_choice.submit();
+            e.preventDefault();   
+        });
+
+        const add_input = (elem) => {
+            const l_item = `<input type='text' style='width: 300px;' name='task[]' class='item${elem.getElementsByTagName('input').length+1}' required/><br>`;
+            elem.insertAdjacentHTML('beforeend', l_item);
+        };
+        const remove_input = (elem) => {
+            if(elem.children.length > 2){
+                elem.removeChild(elem.lastElementChild.previousElementSibling);
+            }
+        };
+        
+    </script>
+{% endblock main %}
