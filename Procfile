@@ -1,0 +1,1 @@
+web: gunicorn app: .landscape/project2_demo.py
