@@ -214,3 +214,66 @@ python3 /home/jdreeder1/.landscape/project2_demo.py
 python3 /home/jdreeder1/.landscape/project2_demo.py
 /home/jdreeder1/.landscape/project2_demo.py
 lsb_release -a
+git config --list --show-origin
+git config --global user.name "Justin R"
+git config --global user.email jdreeder1@gmail.com
+git config --list --show-origin
+git pull remote main
+git checkout main
+git checkout deploy
+git checkout project_2
+git status
+git reset .vscode-server
+git status
+git checkout main
+git push
+git push main
+git push --set-upstream main master
+git push --set-upstream main
+git push main
+git checkout
+git init
+git add --all
+git status
+git restore --staged flask_tutorial.db
+git restore --staged .vscode-server
+git commit
+git add --all
+git commit -m "feat: Allow admin to view user metrics and delete users"
+git push
+git remote add origin https://github.com/jdreeder1/To-Do-List.git
+git push
+git remote add deploy https://github.com/jdreeder1/To-Do-List.git
+git push
+git remote -v
+git push --set-upstream origin master
+git rm -r --cached myFolder
+git rm -r .vscode-server
+--cached
+git rm -r --cached .vscode-server
+git add --all
+git status
+pip install gunicorn
+pip3 install gunicorn
+touch Procfile
+pip3 freeze > requirements.txt
+heroku login
+git add .gitignore
+git add Procfile
+git add requirements.txt
+git status
+git add .cache/pip/http/6/
+git add .cache/pip/http/c/
+git add .local/bin/gunicorn
+git add .local/lib/python3.8/site-packages/gunicorn-20.1.0.dist-info/
+git add .local/lib/python3.8/site-packages/gunicorn/
+git add README.md
+git status
+git commit -m "chore: Add Procfile and requirements files for heroku deployment" -m "fix: Out .gitignore and README.md in root dir"
+git status
+git push
+git status
+git pull
+git push
+sudo apt list --upgradable
+python3 -v
