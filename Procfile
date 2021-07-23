@@ -1,1 +1,1 @@
-web: gunicorn app: .landscape/main.py
+web: gunicorn main: app
