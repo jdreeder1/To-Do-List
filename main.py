@@ -5,15 +5,16 @@ import sys #for printing in console
 import math
 #Using PostgreSQL
 import psycopg2
-import project2_model
-import project2_admin_model
+#import .landscape
+import model
+import admin_model
 
 app = Flask(__name__)
 app.secret_key = 'jumpingjacks'
 username = ''
 admin = ''
-user = project2_model.check_users()
-administrator = project2_model.check_admin()
+user = model.check_users()
+administrator = model.check_admin()
 
 #need post route to create a new user/signup (If the email address already exists then the signup should fail)
 #need post route to login
@@ -35,7 +36,7 @@ def home():
         username = request.form['email']
         password = request.form['password']
 
-        seed = project2_model.signup(fname, lname, username, password)
+        seed = model.signup(fname, lname, username, password)
         if(seed):
         #POST FORM DATA TO DATABASE - IF USERNAME/EMAIL EXISTS, RETURN ERROR MSG
             message = 'Account successfully created! Welcome, {fname}!'.format(fname = fname)
@@ -69,15 +70,15 @@ def admin():
 def admin_login():
     session.pop('admin', None) #if someone else already logged in when post request to this route, kick them out
     areyouuser = request.form['email']
-    pwd = project2_model.check_admin_pw(areyouuser)
+    pwd = model.check_admin_pw(areyouuser)
     if(pwd is None):
         return render_template('project2_admin.html', message = 'Invalid login information!')
     elif request.form['password'] == pwd:
         session['admin'] = request.form['email']
-        count_users = project2_admin_model.count_all_users()
-        recent_users = project2_admin_model.find_recent_users()
-        count_lists = project2_admin_model.count_all_lists()
-        recent_lists = project2_admin_model.find_recent_lists()
+        count_users = admin_model.count_all_users()
+        recent_users = admin_model.find_recent_users()
+        count_lists = admin_model.count_all_lists()
+        recent_lists = admin_model.find_recent_lists()
 
         return render_template('project2_admin_dashboard.html', message = 'Welcome, admin!', count_users = count_users, recent_users = recent_users, count_lists = count_lists, recent_lists = recent_lists) #refers to function above that's associated with dashboard
     else:
@@ -86,8 +87,8 @@ def admin_login():
 @app.route('/admin/users', methods=['GET'])
 def user_metrics():
     if 'admin' in session:
-        all_users = project2_admin_model.find_all_users(1)
-        num_pgs = math.ceil(project2_admin_model.count_all_users() / 50)
+        all_users = admin_model.find_all_users(1)
+        num_pgs = math.ceil(admin_model.count_all_users() / 50)
 
         return render_template('project2_admin_metrics.html', all_users = all_users, num_pgs = num_pgs)
     else:
@@ -98,8 +99,8 @@ def user_info():
     if 'admin' in session:
         page = request.args.get('page')
         print("{page}".format(page = page), file=sys.stdout)
-        all_users = project2_admin_model.find_all_users(page)
-        num_pgs = math.ceil(project2_admin_model.count_all_users() / 50)
+        all_users = admin_model.find_all_users(page)
+        num_pgs = math.ceil(admin_model.count_all_users() / 50)
 
         return render_template('project2_admin_metrics.html', all_users = all_users, num_pgs = num_pgs)
     else:
@@ -109,7 +110,7 @@ def user_info():
 def find_users():
     if 'admin' in session:
         users = []
-        recent_users = project2_admin_model.find_all_users()
+        recent_users = admin_model.find_all_users()
         for i in range(len(recent_users)):
             users.append(recent_users[i])
         #GET CHOSEN LIST FROM DATABASE AND SEND TO CLIENT
@@ -119,7 +120,7 @@ def find_users():
 def delete_user():
     if 'admin' in session:
         email = request.form['email']
-        delete_user = project2_admin_model.delete_user(email)
+        delete_user = admin_model.delete_user(email)
         #delete_user_lists = project2_admin_model.delete_user_lists(email)
         message = '{delete_user} user deleted.'.format(delete_user = delete_user)
         return render_template('project2_admin_metrics.html', message = message, refresh = True)   
@@ -139,7 +140,7 @@ def login():
 def login_func():
     session.pop('username', None) #if someone else already logged in when post request to this route, kick them out
     areyouuser = request.form['email']
-    pwd = project2_model.check_pw(areyouuser)
+    pwd = model.check_pw(areyouuser)
     if(pwd is None):
         return render_template('project2_login.html', message = 'Invalid login information!')
     elif request.form['password'] == pwd:
@@ -153,7 +154,7 @@ def login_func():
 def get_lists():
      #chosen_list = request.form['chosen_list']
      list_names = []
-     tasks = project2_model.read_lists(session['username'])
+     tasks = model.read_lists(session['username'])
      for i in range(len(tasks)):
          list_names.append(tasks[i][2])
      #GET CHOSEN LIST FROM DATABASE AND SEND TO CLIENT
@@ -162,7 +163,7 @@ def get_lists():
 @app.route('/pick_list', methods= ['POST'])
 def pick_list():
     list_choice = request.form['list_choice']
-    tasks = project2_model.find_list(list_choice)
+    tasks = model.find_list(list_choice)
     #parsed = json.loads(tasks)
     #for i in range(len(tasks)):
      #   list_names.append(tasks[i])
@@ -183,7 +184,7 @@ def new_list():
     #username = request.form['username']
     list_name = request.form['list_name']
     task = json.dumps({"task": request.form.getlist('task[]')}) #request.form.getlist('task[]')
-    seed = project2_model.seed_list(session['username'], list_name, task)
+    seed = model.seed_list(session['username'], list_name, task)
     message = 'New list submitted successfully!'
     return render_template('project2_create_list.html', message = message, username = session['username'])
 
@@ -192,7 +193,7 @@ def update_list():
     list_name = request.form['list_name']
     #task = request.form.getlist('task[]')
     j_son = json.dumps({"task": request.form.getlist('task[]')})
-    update = project2_model.update_list(session['username'], list_name, j_son)
+    update = model.update_list(session['username'], list_name, j_son)
     message = '{update} list successfully updated!'.format(update = update)
 
     return render_template('project2_dashboard.html', message = message)
@@ -200,7 +201,7 @@ def update_list():
 @app.route('/delete_list', methods = ['POST'])
 def delete_list():
     list_name = request.form['list_name']
-    deleted_count = project2_model.delete_list(session['username'], list_name)
+    deleted_count = model.delete_list(session['username'], list_name)
     message = '{count} list successfully deleted!'.format(count = deleted_count)
     return render_template('project2_dashboard.html', message = message)
 
