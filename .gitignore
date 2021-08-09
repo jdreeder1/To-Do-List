@@ -6,3 +6,6 @@ flask_tutorial.db
 tutorial
 homework3
 .netrc
+todolist_env
+.bash_history
+backup/backup.txt
